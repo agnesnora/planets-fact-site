@@ -2,6 +2,7 @@ import { FC } from "react";
 
 import { Button } from "../Button/Button";
 import { TfiMenu } from "react-icons/tfi";
+import { MenuDropdown } from "../MenuDropdown/MenuDropdown";
 import "./styles/Navbar.css";
 interface NavbarProps {}
 
@@ -18,6 +19,7 @@ export const Navbar: FC = () => {
         </Button>
       </div>
       <hr />
+      <MenuDropdown className="menu--dropdown">Cili</MenuDropdown>
     </div>
   );
 };
