@@ -1,4 +1,4 @@
-interface PlanetData {
+export interface PlanetData {
   name: string;
   overview: {
     content: string;
