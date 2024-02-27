@@ -1,3 +1,18 @@
+@import "./variables.scss";
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: $black;
+  color: $pureWhite;
+  margin: 0 auto;
+}
+.default {
+  background-color: $button--default--bgColor;
+  border: $button--default--border;
+  color: $button--textColor;
+  font-family: $upperCaseFont;
+  padding: $button--padding;
 }

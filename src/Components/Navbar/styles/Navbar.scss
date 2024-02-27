@@ -1,0 +1,28 @@
+@import "../../../variables.scss";
+
+.navbar--container {
+  hr {
+    color: $darkGrey;
+  }
+  .navbar--flex--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 2em 0.5em 2em;
+    h1 {
+      font-family: $upperCaseFont;
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    button {
+      background-color: transparent;
+      color: $pureWhite;
+      border: none;
+      font-size: 1.75rem;
+      margin-top: 0.25em;
+    }
+  }
+}

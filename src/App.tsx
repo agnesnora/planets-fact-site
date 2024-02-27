@@ -1,9 +1,11 @@
 import "./App.css";
+import { Button } from "./Components/Button/Button";
+import { Navbar } from "./Components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <div>CIli</div>
+      <Navbar />
     </>
   );
 }

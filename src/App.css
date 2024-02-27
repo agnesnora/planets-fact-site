@@ -1,3 +1,17 @@
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: #070724;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.default {
+  background-color: transparent;
+  border: solid 1px #838391;
+  color: #ffffff;
+  font-family: "Antonio", sans-serif;
+  padding: 0.75em 13em 0.75em 1.75em;
 }/*# sourceMappingURL=App.css.map */

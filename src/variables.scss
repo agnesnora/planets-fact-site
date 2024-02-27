@@ -27,7 +27,7 @@ $fontFamily: "League Spartan", sans-serif;
 
 // BUTTONS
 // ---backgroundcolor
-$button--default--bgColor: $black;
+$button--default--bgColor: transparent;
 $button--active--bgColor: $mercuryColor;
 $button--hover--bgColor: $darkGrey;
 
@@ -38,3 +38,7 @@ $button--fontFamily: $upperCaseFont;
 // ---border
 
 $button--default--border: solid 1px $lightGrey;
+
+//---padding
+
+$button--padding: 0.75em 13em 0.75em 1.75em;

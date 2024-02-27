@@ -1,0 +1,24 @@
+.navbar--container hr {
+  color: #38384f;
+}
+.navbar--container .navbar--flex--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 2em 0.5em 2em;
+}
+.navbar--container .navbar--flex--container h1 {
+  font-family: "Antonio", sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.navbar--container .navbar--flex--container button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 1.75rem;
+  margin-top: 0.25em;
+}/*# sourceMappingURL=Navbar.css.map */
