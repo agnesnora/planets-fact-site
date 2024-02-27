@@ -1,0 +1,40 @@
+// COLORS
+
+$pureWhite: #ffffff;
+$black: #070724;
+$darkGrey: #38384f;
+$lightGrey: #838391;
+$mercuryColor: #419ebb;
+$venusColor: #eda249;
+$earthColor: #6f2ed6;
+$marsColor: #d14c32;
+$jupiterColor: #d83a34;
+$saturnColor: #cd5120;
+$uranusColor: #1ec1a2;
+$neptunColor: #2d68f0;
+
+//TYPOGRAPHY
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 700
+//     font-optical-sizing: auto;
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+$upperCaseFont: "Antonio", sans-serif;
+$fontFamily: "League Spartan", sans-serif;
+
+// BUTTONS
+// ---backgroundcolor
+$button--default--bgColor: $black;
+$button--active--bgColor: $mercuryColor;
+$button--hover--bgColor: $darkGrey;
+
+// ---textcolor
+$button--textColor: $pureWhite;
+$button--fontFamily: $upperCaseFont;
+
+// ---border
+
+$button--default--border: solid 1px $lightGrey;
