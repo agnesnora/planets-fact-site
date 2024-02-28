@@ -1,0 +1,37 @@
+.mercury {
+  background-color: #419ebb;
+}
+
+.venus {
+  background-color: #eda249;
+}
+
+.earth {
+  background-color: #6f2ed6;
+}
+
+.mars {
+  background-color: #d14c32;
+}
+
+.jupiter {
+  background-color: #d83a34;
+}
+
+.saturn {
+  background-color: #cd5120;
+}
+
+.uranus {
+  background-color: #1ec1a2;
+}
+
+.neptune {
+  background-color: #2d68f0;
+}
+
+.dot {
+  height: 1em;
+  width: 1em;
+  border-radius: 50px;
+}/*# sourceMappingURL=planets.css.map */
