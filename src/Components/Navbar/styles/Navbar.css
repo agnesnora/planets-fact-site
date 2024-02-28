@@ -21,4 +21,8 @@
   border: none;
   font-size: 1.75rem;
   margin-top: 0.25em;
+}
+
+.planets--container--horizontal ul {
+  display: flex;
 }/*# sourceMappingURL=Navbar.css.map */

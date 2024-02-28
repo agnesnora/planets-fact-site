@@ -1,20 +1,23 @@
-import { FC, useState } from "react";
+import { FC, useState, useContext } from "react";
 
 import { Button } from "../Button/Button";
 import { TfiMenu } from "react-icons/tfi";
 import { Planets } from "../Planets/Planets";
-// import { MenuItem } from "../MenuItem/MenuItem";
-// import { AppContext } from "../../App";
-// import { Link } from "react-router-dom";
+import { AppContext } from "../../App";
 import "./styles/Navbar.css";
 
 interface NavbarProps {}
 
 export const Navbar: FC = () => {
   const [isNavbarOn, setIsNavbarOn] = useState<boolean>(false);
-  // const context = useContext(AppContext);
+
+  const context = useContext(AppContext);
+  const windowWidth = context?.windowWidth ?? 1200;
   const handleMenuClick = () => {
     setIsNavbarOn((prevOn) => !prevOn);
+  };
+  const closeNavbarWithLinkClick = () => {
+    setIsNavbarOn(false);
   };
 
   return (
@@ -26,7 +29,15 @@ export const Navbar: FC = () => {
         </Button>
       </div>
       <hr />
-      {isNavbarOn ? <Planets className="planets--container" /> : null}
+      {isNavbarOn && windowWidth < 768 ? (
+        <Planets
+          className="planets--container--vertical"
+          closeNavbarWithLinkClick={closeNavbarWithLinkClick}
+          isNavbarOn={isNavbarOn}
+        />
+      ) : (
+        <Planets className="planets--container--horizontal" />
+      )}
     </div>
   );
 };
