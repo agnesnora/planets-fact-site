@@ -2,6 +2,7 @@ import "./App.css";
 import { Button } from "./Components/Button/Button";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { FC, createContext } from "react";
+import { BrowserRouter, Router, Routes, Switch } from "react-router-dom";
 
 import { PlanetData } from "../data";
 import planets from "../data";
@@ -14,9 +15,11 @@ const App: FC = () => {
   const contextValue: AppContectInterface = { planets };
   return (
     <>
-      <AppContext.Provider value={contextValue}>
-        <Navbar />
-      </AppContext.Provider>
+      <BrowserRouter>
+        <AppContext.Provider value={contextValue}>
+          <Navbar />
+        </AppContext.Provider>
+      </BrowserRouter>
     </>
   );
 };
