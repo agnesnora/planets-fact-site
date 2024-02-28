@@ -1,36 +1,49 @@
+@import "../../../variables.scss";
 .mercury {
-  background-color: #419ebb;
+  background-color: $mercuryColor;
 }
 
 .venus {
-  background-color: #eda249;
+  background-color: $venusColor;
 }
 
 .earth {
-  background-color: #6f2ed6;
+  background-color: $earthColor;
 }
 
 .mars {
-  background-color: #d14c32;
+  background-color: $marsColor;
 }
 
 .jupiter {
-  background-color: #d83a34;
+  background-color: $jupiterColor;
 }
 
 .saturn {
-  background-color: #cd5120;
+  background-color: $saturnColor;
 }
 
 .uranus {
-  background-color: #1ec1a2;
+  background-color: $uranusColor;
 }
 
 .neptune {
-  background-color: #2d68f0;
+  background-color: $neptunColor;
 }
 .dot {
   height: 1em;
   width: 1em;
   border-radius: 50px;
+}
+.view--container {
+  display: flex;
+  justify-content: space-between;
+  button {
+    background-color: transparent;
+    text-transform: uppercase;
+    color: $lightGrey;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: $Spartan;
+  }
 }

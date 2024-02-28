@@ -34,4 +34,17 @@
   height: 1em;
   width: 1em;
   border-radius: 50px;
+}
+
+.view--container {
+  display: flex;
+  justify-content: space-between;
+}
+.view--container button {
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #838391;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "League Spartan", sans-serif;
 }/*# sourceMappingURL=planets.css.map */

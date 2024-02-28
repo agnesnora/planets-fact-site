@@ -56,7 +56,7 @@ export const PlanetsDetailPage: FC = () => {
 
   return (
     <div>
-      <div>
+      <div className="view--container">
         <Button onClick={handleOverviewClick}>Overview</Button>
         <Button onClick={handleStructureClick}>Structure</Button>
         <Button onClick={handleSurfaceClick}>Surface</Button>
@@ -66,6 +66,20 @@ export const PlanetsDetailPage: FC = () => {
         <h1>{planet.name.toUpperCase()}</h1>
         <p>{planet.overview.content}</p>
         <Link to={planet.overview.source}>Source: Wikipedia</Link>
+      </div>
+      <div>
+        <div className="fact--box">
+          <h4>Rotation time {planet.rotation}</h4>
+        </div>
+        <div className="fact--box">
+          <h4>Revolution time{planet.revolution}</h4>
+        </div>
+        <div className="fact--box">
+          <h4>Radius{planet.radius}</h4>
+        </div>
+        <div className="fact--box">
+          <h4>Temperature{planet.temperature}</h4>
+        </div>
       </div>
     </div>
   );

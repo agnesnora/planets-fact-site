@@ -22,8 +22,8 @@ $neptunColor: #2d68f0;
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
 
-$upperCaseFont: "Antonio", sans-serif;
-$fontFamily: "League Spartan", sans-serif;
+$Antonio: "Antonio", sans-serif;
+$Spartan: "League Spartan", sans-serif;
 
 // BUTTONS
 // ---backgroundcolor
@@ -33,7 +33,6 @@ $button--hover--bgColor: $darkGrey;
 
 // ---textcolor
 $button--textColor: $pureWhite;
-$button--fontFamily: $upperCaseFont;
 
 // ---border
 
