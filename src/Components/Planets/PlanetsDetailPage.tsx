@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
-import { FC, useContext } from "react";
+import { useParams, Link } from "react-router-dom";
+import { FC, useContext, useState } from "react";
 import { AppContext } from "../../App";
 import { PlanetData } from "../../../data";
+import { Button } from "../Button/Button";
 
 interface RouteParams {
   name: string;
@@ -13,15 +14,25 @@ const isRouteParams = (params: any): params is RouteParams => {
 
 export const PlanetsDetailPage: FC = () => {
   const context = useContext(AppContext);
-  if (!context) {
-    console.error("Context is not available");
-    return null;
-  }
 
   const params = useParams();
+  const [view, setView] = useState<string>("planet");
+  const handleOverviewClick = () => {
+    setView("planet");
+  };
+  const handleStructureClick = () => {
+    setView("internal");
+  };
+  const handleSurfaceClick = () => {
+    setView("geology");
+  };
 
   if (!isRouteParams(params)) {
     console.error("Invalid params:", params);
+    return null;
+  }
+  if (!context) {
+    console.error("Context is not available");
     return null;
   }
 
@@ -36,5 +47,26 @@ export const PlanetsDetailPage: FC = () => {
     return null;
   }
   console.log(planet);
-  return <h1>I am the {planet.name}</h1>;
+  const planetImage: string =
+    view === "planet"
+      ? planet.images.planet
+      : view === "geology"
+      ? planet.images.geology
+      : planet.images.internal;
+
+  return (
+    <div>
+      <div>
+        <Button onClick={handleOverviewClick}>Overview</Button>
+        <Button onClick={handleStructureClick}>Structure</Button>
+        <Button onClick={handleSurfaceClick}>Surface</Button>
+      </div>
+      <img src={planetImage} />
+      <div className="planet--intro">
+        <h1>{planet.name.toUpperCase()}</h1>
+        <p>{planet.overview.content}</p>
+        <Link to={planet.overview.source}>Source: Wikipedia</Link>
+      </div>
+    </div>
+  );
 };
