@@ -24,9 +24,13 @@ export const Navbar: FC = () => {
     <div className="navbar--container">
       <div className="navbar--flex--container">
         <h1>The planets</h1>
-        <Button onClick={handleMenuClick} className="sandwich--menu">
-          <TfiMenu />
-        </Button>
+        {innerWidth < 768 ? (
+          <Button onClick={handleMenuClick} className="sandwich--menu">
+            <TfiMenu />
+          </Button>
+        ) : (
+          <Planets className="planets--container--horizontal" />
+        )}
       </div>
       <hr />
       {isNavbarOn && windowWidth < 768 ? (
@@ -35,9 +39,7 @@ export const Navbar: FC = () => {
           closeNavbarWithLinkClick={closeNavbarWithLinkClick}
           isNavbarOn={isNavbarOn}
         />
-      ) : (
-        <Planets className="planets--container--horizontal" />
-      )}
+      ) : null}
     </div>
   );
 };
