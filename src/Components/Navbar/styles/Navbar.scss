@@ -1,9 +1,6 @@
 @import "../../../variables.scss";
 
 .navbar--container {
-  hr {
-    color: $darkGrey;
-  }
   .navbar--flex--container {
     display: flex;
     justify-content: space-between;

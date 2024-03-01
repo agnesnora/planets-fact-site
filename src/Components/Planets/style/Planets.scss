@@ -35,6 +35,7 @@
   width: 1em;
   border-radius: 50px;
 }
+
 .view--container {
   display: flex;
   justify-content: space-between;
@@ -43,7 +44,62 @@
     text-transform: uppercase;
     color: $lightGrey;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1em 2em;
     font-family: $Spartan;
+    border: none;
+    letter-spacing: 3px;
+  }
+}
+
+.planet--container {
+  padding: 2em;
+  .img--container {
+    display: flex;
+  }
+  img {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .planet--intro {
+    text-align: center;
+    margin: 2em auto;
+
+    h1 {
+      letter-spacing: -1.5;
+      font-size: 2.5rem;
+      line-height: 1.5;
+      font-family: $Antonio;
+    }
+
+    p {
+      font-family: $Spartan;
+      font-size: 1.375rem;
+      font-weight: 200;
+      line-height: 1.5;
+    }
+  }
+  .fact--container {
+    .fact--box {
+      display: flex;
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px $lightGrey solid;
+      padding: 1em 2em;
+      margin-bottom: 1em;
+      h4 {
+        font-family: $Antonio;
+        font-size: 2rem;
+        margin: 0;
+      }
+      p {
+        letter-spacing: 0.73px;
+        font-weight: 600;
+        color: $lightGrey;
+        margin: 0;
+      }
+    }
   }
 }

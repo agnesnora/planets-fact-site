@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { PlanetData } from "../../../data";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
 interface PlanetDetailProps {
   planet: PlanetData | undefined;
@@ -41,28 +42,48 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
   return (
     <div>
       <div className="view--container">
-        <Button onClick={handleOverviewClick}>Overview</Button>
-        <Button onClick={handleStructureClick}>Structure</Button>
-        <Button onClick={handleSurfaceClick}>Surface</Button>
+        <Button className="view--btn" onClick={handleOverviewClick}>
+          Overview
+        </Button>
+        <Button className="view--btn" onClick={handleStructureClick}>
+          Structure
+        </Button>
+        <Button className="view--btn" onClick={handleSurfaceClick}>
+          Surface
+        </Button>
       </div>
-      <img src={planetImage} alt={`${planet.name} image`} />
-      <div className="planet--intro">
-        <h1>{planet.name.toUpperCase()}</h1>
-        <p>{planet.overview.content}</p>
-        <Link to={planet.overview.source}>Source: Wikipedia</Link>
-      </div>
-      <div>
-        <div className="fact--box">
-          <h4>Rotation time {planet.rotation}</h4>
+      <hr />
+      <div className="planet--container">
+        <div className="img--container">
+          {" "}
+          <img src={planetImage} alt={`${planet.name} image`} />
         </div>
-        <div className="fact--box">
-          <h4>Revolution time{planet.revolution}</h4>
+
+        <div className="planet--intro">
+          <h1>{planet.name.toUpperCase()}</h1>
+          <p>{planet.overview.content}</p>
+          <p>Source:</p>
+          <Link to={planet.overview.source}>
+            Wikipedia <FaExternalLinkSquareAlt />
+          </Link>
         </div>
-        <div className="fact--box">
-          <h4>Radius{planet.radius}</h4>
-        </div>
-        <div className="fact--box">
-          <h4>Temperature{planet.temperature}</h4>
+        <div className="fact--container">
+          <div className="fact--box">
+            <p>Rotation time </p>
+            <h4>{planet.rotation}</h4>
+          </div>
+          <div className="fact--box">
+            <p>Revolution time</p>
+            <h4>{planet.revolution}</h4>
+          </div>
+          <div className="fact--box">
+            <p>Radius</p>
+            <h4>{planet.radius}</h4>
+          </div>
+          <div className="fact--box">
+            <p>Temperature</p>
+            <h4>{planet.temperature}</h4>
+          </div>
         </div>
       </div>
     </div>

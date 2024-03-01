@@ -9,6 +9,7 @@ body {
   color: $pureWhite;
   margin: 0 auto;
   font-family: $Spartan;
+  background-image: url("/background-stars.svg");
 }
 .default {
   background-color: $button--default--bgColor;
@@ -16,4 +17,7 @@ body {
   color: $button--textColor;
   font-family: $Antonio;
   padding: $button--padding;
+}
+hr {
+  color: $darkGrey;
 }

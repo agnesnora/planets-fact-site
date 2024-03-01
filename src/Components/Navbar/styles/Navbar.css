@@ -1,6 +1,3 @@
-.navbar--container hr {
-  color: #38384f;
-}
 .navbar--container .navbar--flex--container {
   display: flex;
   justify-content: space-between;

@@ -45,6 +45,57 @@
   text-transform: uppercase;
   color: #838391;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1em 2em;
   font-family: "League Spartan", sans-serif;
+  border: none;
+  letter-spacing: 3px;
+}
+
+.planet--container {
+  padding: 2em;
+}
+.planet--container .img--container {
+  display: flex;
+}
+.planet--container img {
+  margin: 0 auto;
+  text-align: center;
+}
+.planet--container .planet--intro {
+  text-align: center;
+  margin: 2em auto;
+}
+.planet--container .planet--intro h1 {
+  letter-spacing: -1.5;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-family: "Antonio", sans-serif;
+}
+.planet--container .planet--intro p {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+.planet--container .fact--container .fact--box {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px #838391 solid;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+.planet--container .fact--container .fact--box h4 {
+  font-family: "Antonio", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+.planet--container .fact--container .fact--box p {
+  letter-spacing: 0.73px;
+  font-weight: 600;
+  color: #838391;
+  margin: 0;
 }/*# sourceMappingURL=planets.css.map */
