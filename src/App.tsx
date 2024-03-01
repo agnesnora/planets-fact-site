@@ -2,6 +2,7 @@ import "./App.css";
 import { Button } from "./Components/Button/Button";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { FC, createContext } from "react";
+import { EarthHomePage } from "./Components/Planets/EarthHomePage";
 import { PlanetsDetailPage } from "./Components/Planets/PlanetsDetailPage";
 import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -34,8 +35,8 @@ const App: FC = () => {
         <AppContext.Provider value={contextValue}>
           <Navbar />
           <Routes>
-            {" "}
-            <Route path="/planet/:name" element={<PlanetsDetailPage />}></Route>
+            <Route path="/" element={<EarthHomePage />}></Route>
+            <Route path="/planet/:name" element={<PlanetsDetailPage />} />
           </Routes>
         </AppContext.Provider>
       </BrowserRouter>
@@ -44,14 +45,3 @@ const App: FC = () => {
 };
 export { AppContext };
 export default App;
-
-//Creating reusable components for a Navbar
-//Button, menubutton, menudropdown, menuitem
-
-//Creating Navbar component
-
-// Creating an Options component
-
-//Creating a planetdetails component
-
-// creating the  planetdatabox component
