@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { PlanetData } from "../../../data";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";

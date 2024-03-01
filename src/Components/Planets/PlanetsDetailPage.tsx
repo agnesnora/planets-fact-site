@@ -1,5 +1,4 @@
-// PlanetsDetailPage.tsx
-import React, { FC, useContext, useState } from "react";
+import { FC, useContext, useState } from "react";
 import { AppContext } from "../../App";
 import { useParams } from "react-router-dom";
 import { PlanetDetailComponent } from "./PlanetDetailComponent";
