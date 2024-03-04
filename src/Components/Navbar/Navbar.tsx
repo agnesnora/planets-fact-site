@@ -4,12 +4,16 @@ import { Button } from "../Button/Button";
 import { TfiMenu } from "react-icons/tfi";
 import { Planets } from "../Planets/Planets";
 import { AppContext } from "../../App";
+import { NavLink } from "react-router-dom";
 import "./styles/Navbar.css";
 
-interface NavbarProps {}
+interface NavbarProps {
+  isNavbarOn: boolean;
+  setIsNavbarOn: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export const Navbar: FC = () => {
-  const [isNavbarOn, setIsNavbarOn] = useState<boolean>(false);
+export const Navbar: FC<NavbarProps> = ({ isNavbarOn, setIsNavbarOn }) => {
+  // const [isNavbarOn, setIsNavbarOn] = useState<boolean>(false);
 
   const context = useContext(AppContext);
   const windowWidth = context?.windowWidth ?? 1200;
@@ -23,7 +27,11 @@ export const Navbar: FC = () => {
   return (
     <div className="navbar--container">
       <div className="navbar--flex--container">
-        <h1>The planets</h1>
+        <NavLink to="/" onClick={closeNavbarWithLinkClick}>
+          {" "}
+          <h1>The planets</h1>
+        </NavLink>
+
         {innerWidth < 768 ? (
           <Button onClick={handleMenuClick} className="sandwich--menu">
             <TfiMenu />

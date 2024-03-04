@@ -17,6 +17,7 @@ interface AppContectInterface {
 const AppContext = createContext<AppContectInterface | null>(null);
 const App: FC = () => {
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [isNavbarOn, setIsNavbarOn] = useState<boolean>(false);
 
   useEffect(() => {
     const updateWindowWidth = () => {
@@ -33,10 +34,14 @@ const App: FC = () => {
     <>
       <BrowserRouter>
         <AppContext.Provider value={contextValue}>
-          <Navbar />
+          <Navbar isNavbarOn={isNavbarOn} setIsNavbarOn={setIsNavbarOn} />
           <Routes>
-            <Route path="/" element={<EarthHomePage />}></Route>
-            <Route path="/planet/:name" element={<PlanetsDetailPage />} />
+            {!isNavbarOn ? (
+              <Route path="/" element={<EarthHomePage />} />
+            ) : null}
+            {!isNavbarOn ? (
+              <Route path="/planet/:name" element={<PlanetsDetailPage />} />
+            ) : null}
           </Routes>
         </AppContext.Provider>
       </BrowserRouter>
