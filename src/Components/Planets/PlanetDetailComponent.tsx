@@ -39,16 +39,67 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
       ? planet.images.geology
       : planet.images.internal;
 
+  const getButtonStyle = (planetName) => {
+    let borderBottomStyle = "";
+
+    switch (planetName) {
+      case "Earth":
+        borderBottomStyle = "3px solid  #6f2ed6";
+        break;
+      case "Mars":
+        borderBottomStyle = "3px solid #d14c32";
+        break;
+      case "Mercury":
+        borderBottomStyle = "3px solid #419ebb";
+        break;
+      case "Venus":
+        borderBottomStyle = "3px solid #eda249";
+        break;
+      case "Jupiter":
+        borderBottomStyle = "3px solid  #d83a34";
+        break;
+      case "Saturn":
+        borderBottomStyle = "3px solid  #cd5120";
+        break;
+      case "Uranus":
+        borderBottomStyle = "3px solid  #1ec1a2";
+        break;
+      case "Neptune":
+        borderBottomStyle = "3px solid   #2d68f0";
+        break;
+
+      default:
+        // Default style when no match is found
+        borderBottomStyle = "";
+        break;
+    }
+
+    return { borderBottom: borderBottomStyle };
+  };
+  const isActive = (buttonView) => (view === buttonView ? "active" : "");
   return (
     <div>
       <div className="view--container">
-        <Button className="view--btn" onClick={handleOverviewClick}>
+        <Button
+          onClick={handleOverviewClick}
+          className={isActive("planet")}
+          style={isActive("planet") ? getButtonStyle(planet.name) : {}}
+        >
           Overview
         </Button>
-        <Button className="view--btn" onClick={handleStructureClick}>
+        <Button
+          onClick={handleStructureClick}
+          className={isActive("internal")}
+          s
+          style={isActive("internal") ? getButtonStyle(planet.name) : {}}
+        >
           Structure
         </Button>
-        <Button className="view--btn" onClick={handleSurfaceClick}>
+        <Button
+          onClick={handleSurfaceClick}
+          className={isActive("geology")}
+          style={isActive("geology") ? getButtonStyle(planet.name) : {}}
+        >
           Surface
         </Button>
       </div>
@@ -62,10 +113,13 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
         <div className="planet--intro">
           <h1>{planet.name.toUpperCase()}</h1>
           <p>{planet.overview.content}</p>
-          <p>Source:</p>
-          <Link to={planet.overview.source}>
-            Wikipedia <FaExternalLinkSquareAlt />
-          </Link>
+          <div className="wikipedia">
+            <p>Source :</p>
+            <Link to={planet.overview.source}>
+              Wikipedia{" "}
+              <FaExternalLinkSquareAlt className="external--link--icon" />
+            </Link>
+          </div>
         </div>
         <div className="fact--container">
           <div className="fact--box">

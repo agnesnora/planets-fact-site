@@ -28,7 +28,7 @@
 }
 
 .neptune {
-  background-color: $neptunColor;
+  background-color: $neptuneColor;
 }
 .dot {
   height: 1em;
@@ -50,6 +50,11 @@
     font-family: $Spartan;
     border: none;
     letter-spacing: 3px;
+    border: none;
+  }
+
+  .active {
+    border-bottom: 3px solid;
   }
 }
 
@@ -78,6 +83,26 @@
       font-size: 1.375rem;
       font-weight: 200;
       line-height: 1.5;
+    }
+    .wikipedia {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $lightGrey;
+      a {
+        color: $lightGrey;
+        font-size: 1.375rem;
+        font-weight: 700;
+        margin-left: 0.75em;
+        text-decoration: underline;
+      }
+      p {
+        margin: 0;
+        letter-spacing: 1px;
+      }
+      .external--link--icon {
+        vertical-align: middle;
+      }
     }
   }
   .fact--container {

@@ -51,6 +51,10 @@
   font-family: "League Spartan", sans-serif;
   border: none;
   letter-spacing: 3px;
+  border: none;
+}
+.view--container .active {
+  border-bottom: 3px solid;
 }
 
 .planet--container {
@@ -78,6 +82,26 @@
   font-size: 1.375rem;
   font-weight: 200;
   line-height: 1.5;
+}
+.planet--container .planet--intro .wikipedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #838391;
+}
+.planet--container .planet--intro .wikipedia a {
+  color: #838391;
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-left: 0.75em;
+  text-decoration: underline;
+}
+.planet--container .planet--intro .wikipedia p {
+  margin: 0;
+  letter-spacing: 1px;
+}
+.planet--container .planet--intro .wikipedia .external--link--icon {
+  vertical-align: middle;
 }
 .planet--container .fact--container .fact--box {
   display: flex;

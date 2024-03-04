@@ -1,14 +1,20 @@
-import { FC, ReactNode } from "react";
+import { CSSProperties, FC, ReactNode } from "react";
 
 interface ButtonProps {
   onClick: () => void;
   className: string;
   children: ReactNode;
+  style: CSSProperties;
 }
 
-export const Button: FC<ButtonProps> = ({ onClick, children, className }) => {
+export const Button: FC<ButtonProps> = ({
+  onClick,
+  children,
+  className,
+  style,
+}) => {
   return (
-    <button onClick={onClick} className={className}>
+    <button style={style} onClick={onClick} className={className}>
       {children}
     </button>
   );
