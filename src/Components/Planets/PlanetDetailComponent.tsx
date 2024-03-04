@@ -76,7 +76,8 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
 
     return { borderBottom: borderBottomStyle };
   };
-  const isActive = (buttonView) => (view === buttonView ? "active" : "");
+  const isActive = (buttonView: string) =>
+    view === buttonView ? "active" : "";
   return (
     <div>
       <div className="view--container">
@@ -90,7 +91,6 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
         <Button
           onClick={handleStructureClick}
           className={isActive("internal")}
-          s
           style={isActive("internal") ? getButtonStyle(planet.name) : {}}
         >
           Structure

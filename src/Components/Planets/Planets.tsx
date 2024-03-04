@@ -3,6 +3,7 @@ import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
 import "./style/Planets.css";
 import { PlanetsDetailPage } from "./PlanetsDetailPage";
+import { MdArrowForwardIos } from "react-icons/md";
 interface PlanetsProps {
   // children: ReactNode;
   className: string;
@@ -24,7 +25,11 @@ export const Planets: FC<PlanetsProps> = ({
 
   return (
     <div className={className}>
-      <ul data-testid="planets--list">
+      <ul
+        data-testid="planets--list"
+        className="planets--list"
+        style={{ padding: " 0 1em" }}
+      >
         {context &&
           context.planets &&
           context.planets.map((item) => (
@@ -34,12 +39,20 @@ export const Planets: FC<PlanetsProps> = ({
               aria-label={`View details for the ${item.name} planet`}
               onClick={closeNavbarWithLinkClick}
             >
-              <div onClick={handleLinkClick}>
-                {windowWidth < 768 ? (
-                  <div className={`${item.name.toLowerCase()} dot`}></div>
-                ) : null}
-                <h2>{item.name}</h2>
+              <div
+                onClick={handleLinkClick}
+                className={windowWidth < 768 ? "nav--list--flex" : "nav--list"}
+              >
+                <div className="dotted--name">
+                  {windowWidth < 768 ? (
+                    <div className={`${item.name.toLowerCase()} dot`}></div>
+                  ) : null}
+                  <h2>{item.name}</h2>
+                </div>
+
+                <MdArrowForwardIos className="forward--icon" />
               </div>
+              {windowWidth < 768 ? <hr></hr> : null}
             </Link>
           ))}
       </ul>

@@ -23,6 +23,37 @@
     }
   }
 }
+.planets--container--vertical {
+  .planets--list{
+    padding-left:0;
+  }
+  
+}
 .planets--container--horizontal ul {
   display: flex;
+  
+a {
+  text-decoration: none;
+}
+
+.nav--list--flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1em;
+  .dotted--name {
+    display: flex;
+    align-items: center;
+    h2 {
+      margin-left: 1em;
+      text-transform: uppercase;
+      color: $pureWhite;
+      letter-spacing: 1.36px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+  }
+  .forward--icon {
+    color: $pureWhite;
+  }
 }

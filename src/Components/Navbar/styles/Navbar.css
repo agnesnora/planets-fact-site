@@ -22,4 +22,31 @@
 
 .planets--container--horizontal ul {
   display: flex;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav--list--flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1em;
+}
+.nav--list--flex .dotted--name {
+  display: flex;
+  align-items: center;
+}
+.nav--list--flex .dotted--name h2 {
+  margin-left: 1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1.36px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.nav--list--flex .forward--icon {
+  color: #ffffff;
 }/*# sourceMappingURL=Navbar.css.map */
