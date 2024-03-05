@@ -79,27 +79,40 @@ export const OptionSelector: FC<SelectorProps> = ({
         className={isActive("planet")}
         style={isActive("planet") ? getButtonStyle(planetName) : {}}
       >
-        {/* {windowWidth < 768 ? "Overview" : "01 Overview"} */}
-        {windowWidth < 768 ? (
-          "Overview"
+        {windowWidth > 768 ? (
+          <div>
+            <span className="number">03</span> Overview
+          </div>
         ) : (
-          <span className="number">01</span>
-        )}{" "}
-        Overview
+          "Overview"
+        )}
       </Button>
       <Button
         onClick={handleStructureClick}
         className={isActive("internal")}
         style={isActive("internal") ? getButtonStyle(planetName) : {}}
       >
-        {windowWidth < 768 ? "Structure" : "02 Internal Structure"}
+        {windowWidth > 768 ? (
+          <div>
+            <span className="number">02</span> Internal structure
+          </div>
+        ) : (
+          "Structure"
+        )}
       </Button>
+
       <Button
         onClick={handleSurfaceClick}
         className={isActive("geology")}
         style={isActive("geology") ? getButtonStyle(planetName) : {}}
       >
-        {windowWidth < 768 ? "Structure" : "03 Surface Geology"}
+        {windowWidth > 768 ? (
+          <div>
+            <span className="number">03</span> Surface geology
+          </div>
+        ) : (
+          "Surface"
+        )}
       </Button>
     </div>
   );
