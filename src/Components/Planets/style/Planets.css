@@ -130,34 +130,53 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .planet--main {
+  .planet--container .planet--main {
     display: flex;
     align-items: center;
   }
-  .planet--main .selector--container {
+  .planet--container .planet--main .planet--intro {
+    text-align: left;
+    margin: 0 3em 0 0;
+  }
+  .planet--container .planet--main .planet--intro .wikipedia {
+    justify-content: left;
+  }
+  .planet--container .planet--main .selector--container {
     display: block;
   }
-  .planet--main .selector--container button {
+  .planet--container .planet--main .selector--container button {
     border: #838391 0.1px solid;
     padding: 1em 2em;
-    margin: 1em;
+    margin: 0.5em;
     width: 100%;
+    font-size: 16px;
+    font-weight: 500;
     color: #ffffff;
     text-align: left;
   }
-  .planet--main .selector--container button .number {
+  .planet--container .planet--main .selector--container button .number {
     color: #838391;
     margin-right: 1em;
   }
-  .planet--main .selector--container button:hover {
+  .planet--container .planet--main .selector--container button:hover {
     background-color: #38384f;
   }
   .fact--container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-top: 2em;
+    align-items: left;
   }
   .fact--container .fact--box {
     flex-direction: column;
-    align-content: flex-start;
+  }
+  .fact--container .fact--box h4 {
+    text-align: left;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  .fact--container .fact--box p {
+    text-align: left;
+    align-self: flex-start;
   }
 }/*# sourceMappingURL=planets.css.map */

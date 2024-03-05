@@ -140,35 +140,59 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .planet--main {
-    display: flex;
-    align-items: center;
-    .selector--container {
-      display: block;
-      button {
-        border: $lightGrey 0.1px solid;
-        padding: 1em 2em;
-        margin: 1em;
-        width: 100%;
-        color: $pureWhite;
+  .planet--container {
+    .planet--main {
+      display: flex;
+      align-items: center;
+      .planet--intro {
         text-align: left;
-        .number {
-          color: $lightGrey;
-          margin-right: 1em;
+        margin: 0 3em 0 0;
+        .wikipedia {
+          justify-content: left;
         }
-        &:hover {
-          background-color: $darkGrey;
+      }
+      .selector--container {
+        display: block;
+        button {
+          border: $lightGrey 0.1px solid;
+          padding: 1em 2em;
+          margin: 0.5em;
+          width: 100%;
+          font-size: 16px;
+          font-weight: 500;
+
+          color: $pureWhite;
+          text-align: left;
+          .number {
+            color: $lightGrey;
+            margin-right: 1em;
+          }
+          &:hover {
+            background-color: $darkGrey;
+          }
         }
       }
     }
   }
   .fact--container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-top: 2em;
+
+    align-items: left;
 
     .fact--box {
       flex-direction: column;
-      align-content: flex-start;
+
+      h4 {
+        text-align: left;
+        margin-left: 0;
+        align-self: flex-start;
+      }
+      p {
+        text-align: left;
+        align-self: flex-start;
+      }
     }
   }
 }
