@@ -4,7 +4,11 @@
   align-items: center;
   padding: 2em 2em 0.5em 2em;
 }
-.navbar--container .navbar--flex--container h1 {
+.navbar--container .navbar--flex--container a {
+  text-decoration: none;
+}
+.navbar--container .navbar--flex--container a h1 {
+  color: #ffffff;
   font-family: "Antonio", sans-serif;
   text-transform: uppercase;
   margin: 0;
@@ -20,13 +24,24 @@
   margin-top: 0.25em;
 }
 
-.planets--container--horizontal ul {
-  display: flex;
+.planets--container--vertical .planets--list {
   padding-left: 0;
 }
 
-a {
+.planets--container--horizontal ul {
+  display: flex;
+  justify-content: space-between;
+}
+.planets--container--horizontal ul a {
   text-decoration: none;
+  color: #838391;
+  text-transform: uppercase;
+}
+.planets--container--horizontal ul a h2 {
+  font-weight: 600;
+  padding: 1em 1.2em;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .nav--list--flex {
@@ -49,4 +64,14 @@ a {
 }
 .nav--list--flex .forward--icon {
   color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .navbar--flex--container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .navbar--flex--container a {
+    margin-bottom: 2em;
+  }
 }/*# sourceMappingURL=Navbar.css.map */

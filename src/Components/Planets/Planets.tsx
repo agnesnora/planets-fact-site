@@ -50,7 +50,9 @@ export const Planets: FC<PlanetsProps> = ({
                   <h2>{item.name}</h2>
                 </div>
 
-                <MdArrowForwardIos className="forward--icon" />
+                {windowWidth < 768 ? (
+                  <MdArrowForwardIos className="forward--icon" />
+                ) : null}
               </div>
               {windowWidth < 768 ? <hr></hr> : null}
             </Link>

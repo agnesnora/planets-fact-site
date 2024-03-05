@@ -36,7 +36,7 @@
   border-radius: 50px;
 }
 
-.view--container {
+.selector--container {
   display: flex;
   justify-content: space-between;
   button {
@@ -46,7 +46,8 @@
     cursor: pointer;
     font-weight: 700;
     font-size: 1rem;
-    padding: 1em 2em;
+    margin: 0 1em;
+    padding: 1em;
     font-family: $Spartan;
     border: none;
     letter-spacing: 3px;
@@ -69,44 +70,48 @@
     // width: 200px;
     // height: 200px;
   }
-  .planet--intro {
-    text-align: center;
-    margin: 2em auto;
 
-    h1 {
-      letter-spacing: -1.5;
-      font-size: 2.5rem;
-      line-height: 1.5;
-      font-family: $Antonio;
-    }
+  .planet--main {
+    .planet--intro {
+      text-align: center;
+      margin: 2em auto;
 
-    p {
-      font-family: $Spartan;
-      font-size: 1.375rem;
-      font-weight: 200;
-      line-height: 1.5;
-    }
-    .wikipedia {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $lightGrey;
-      a {
-        color: $lightGrey;
-        font-size: 1.375rem;
-        font-weight: 700;
-        margin-left: 0.75em;
-        text-decoration: underline;
+      h1 {
+        letter-spacing: -1.5;
+        font-size: 2.5rem;
+        line-height: 1.5;
+        font-family: $Antonio;
       }
+
       p {
-        margin: 0;
-        letter-spacing: 1px;
+        font-family: $Spartan;
+        font-size: 1.375rem;
+        font-weight: 200;
+        line-height: 1.5;
       }
-      .external--link--icon {
-        vertical-align: middle;
+      .wikipedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $lightGrey;
+        a {
+          color: $lightGrey;
+          font-size: 1.375rem;
+          font-weight: 700;
+          margin-left: 0.75em;
+          text-decoration: underline;
+        }
+        p {
+          margin: 0;
+          letter-spacing: 1px;
+        }
+        .external--link--icon {
+          vertical-align: middle;
+        }
       }
     }
   }
+
   .fact--container {
     .fact--box {
       display: flex;
@@ -127,6 +132,43 @@
         color: $lightGrey;
         margin: 0;
       }
+    }
+  }
+}
+hr {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .planet--main {
+    display: flex;
+    align-items: center;
+    .selector--container {
+      display: block;
+      button {
+        border: $lightGrey 0.1px solid;
+        padding: 1em 2em;
+        margin: 1em;
+        width: 100%;
+        color: $pureWhite;
+        text-align: left;
+        .number {
+          color: $lightGrey;
+          margin-right: 1em;
+        }
+        &:hover {
+          background-color: $darkGrey;
+        }
+      }
+    }
+  }
+  .fact--container {
+    display: flex;
+    justify-content: space-evenly;
+
+    .fact--box {
+      flex-direction: column;
+      align-content: flex-start;
     }
   }
 }

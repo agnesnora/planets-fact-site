@@ -36,24 +36,25 @@
   border-radius: 50px;
 }
 
-.view--container {
+.selector--container {
   display: flex;
   justify-content: space-between;
 }
-.view--container button {
+.selector--container button {
   background-color: transparent;
   text-transform: uppercase;
   color: #838391;
   cursor: pointer;
   font-weight: 700;
   font-size: 1rem;
-  padding: 1em 2em;
+  margin: 0 1em;
+  padding: 1em;
   font-family: "League Spartan", sans-serif;
   border: none;
   letter-spacing: 3px;
   border: none;
 }
-.view--container .active {
+.selector--container .active {
   border-bottom: 3px solid;
 }
 
@@ -67,40 +68,40 @@
   margin: 0 auto;
   text-align: center;
 }
-.planet--container .planet--intro {
+.planet--container .planet--main .planet--intro {
   text-align: center;
   margin: 2em auto;
 }
-.planet--container .planet--intro h1 {
+.planet--container .planet--main .planet--intro h1 {
   letter-spacing: -1.5;
   font-size: 2.5rem;
   line-height: 1.5;
   font-family: "Antonio", sans-serif;
 }
-.planet--container .planet--intro p {
+.planet--container .planet--main .planet--intro p {
   font-family: "League Spartan", sans-serif;
   font-size: 1.375rem;
   font-weight: 200;
   line-height: 1.5;
 }
-.planet--container .planet--intro .wikipedia {
+.planet--container .planet--main .planet--intro .wikipedia {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #838391;
 }
-.planet--container .planet--intro .wikipedia a {
+.planet--container .planet--main .planet--intro .wikipedia a {
   color: #838391;
   font-size: 1.375rem;
   font-weight: 700;
   margin-left: 0.75em;
   text-decoration: underline;
 }
-.planet--container .planet--intro .wikipedia p {
+.planet--container .planet--main .planet--intro .wikipedia p {
   margin: 0;
   letter-spacing: 1px;
 }
-.planet--container .planet--intro .wikipedia .external--link--icon {
+.planet--container .planet--main .planet--intro .wikipedia .external--link--icon {
   vertical-align: middle;
 }
 .planet--container .fact--container .fact--box {
@@ -122,4 +123,41 @@
   font-weight: 600;
   color: #838391;
   margin: 0;
+}
+
+hr {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .planet--main {
+    display: flex;
+    align-items: center;
+  }
+  .planet--main .selector--container {
+    display: block;
+  }
+  .planet--main .selector--container button {
+    border: #838391 0.1px solid;
+    padding: 1em 2em;
+    margin: 1em;
+    width: 100%;
+    color: #ffffff;
+    text-align: left;
+  }
+  .planet--main .selector--container button .number {
+    color: #838391;
+    margin-right: 1em;
+  }
+  .planet--main .selector--container button:hover {
+    background-color: #38384f;
+  }
+  .fact--container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .fact--container .fact--box {
+    flex-direction: column;
+    align-content: flex-start;
+  }
 }/*# sourceMappingURL=planets.css.map */

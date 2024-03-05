@@ -6,14 +6,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 2em 2em 0.5em 2em;
-    h1 {
-      font-family: $Antonio;
-      text-transform: uppercase;
-      margin: 0;
-      font-size: 1.75rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+    a {
+      text-decoration: none;
+      h1 {
+        color: $pureWhite;
+        font-family: $Antonio;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 1.75rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
     }
+
     button {
       background-color: transparent;
       color: $pureWhite;
@@ -24,16 +29,25 @@
   }
 }
 .planets--container--vertical {
-  .planets--list{
-    padding-left:0;
+  .planets--list {
+    padding-left: 0;
   }
-  
 }
 .planets--container--horizontal ul {
   display: flex;
-  
-a {
-  text-decoration: none;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: $lightGrey;
+    text-transform: uppercase;
+    h2 {
+      font-weight: 600;
+      padding: 1em 1.2em;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 .nav--list--flex {
@@ -44,6 +58,7 @@ a {
   .dotted--name {
     display: flex;
     align-items: center;
+
     h2 {
       margin-left: 1em;
       text-transform: uppercase;
@@ -55,5 +70,15 @@ a {
   }
   .forward--icon {
     color: $pureWhite;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar--flex--container {
+    flex-direction: column;
+    padding: 0;
+    a {
+      margin-bottom: 2em;
+    }
   }
 }
