@@ -79,7 +79,7 @@ export const OptionSelector: FC<SelectorProps> = ({
         className={isActive("planet")}
         style={isActive("planet") ? getButtonStyle(planetName) : {}}
       >
-        {windowWidth > 768 ? (
+        {windowWidth > (context?.screen.mobile ?? 1200) ? (
           <div>
             <span className="number">01</span> Overview
           </div>
@@ -92,7 +92,7 @@ export const OptionSelector: FC<SelectorProps> = ({
         className={isActive("internal")}
         style={isActive("internal") ? getButtonStyle(planetName) : {}}
       >
-        {windowWidth > 768 ? (
+        {windowWidth > (context?.screen.mobile ?? 1200) ? (
           <div>
             <span className="number">02</span> Internal structure
           </div>
@@ -106,7 +106,7 @@ export const OptionSelector: FC<SelectorProps> = ({
         className={isActive("geology")}
         style={isActive("geology") ? getButtonStyle(planetName) : {}}
       >
-        {windowWidth > 768 ? (
+        {windowWidth > (context?.screen.mobile ?? 1200) ? (
           <div>
             <span className="number">03</span> Surface geology
           </div>

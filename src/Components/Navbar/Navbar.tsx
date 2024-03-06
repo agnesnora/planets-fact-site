@@ -1,4 +1,4 @@
-import { FC, useState, useContext } from "react";
+import { FC, useContext } from "react";
 
 import { Button } from "../Button/Button";
 import { TfiMenu } from "react-icons/tfi";
@@ -13,8 +13,6 @@ interface NavbarProps {
 }
 
 export const Navbar: FC<NavbarProps> = ({ isNavbarOn, setIsNavbarOn }) => {
-  // const [isNavbarOn, setIsNavbarOn] = useState<boolean>(false);
-
   const context = useContext(AppContext);
   const windowWidth = context?.windowWidth ?? 1200;
   const handleMenuClick = () => {
@@ -32,7 +30,7 @@ export const Navbar: FC<NavbarProps> = ({ isNavbarOn, setIsNavbarOn }) => {
           <h1>The planets</h1>
         </NavLink>
 
-        {innerWidth < 768 ? (
+        {innerWidth < (context?.screen.mobile ?? 768) ? (
           <Button onClick={handleMenuClick} className="sandwich--menu">
             <TfiMenu />
           </Button>
@@ -41,7 +39,7 @@ export const Navbar: FC<NavbarProps> = ({ isNavbarOn, setIsNavbarOn }) => {
         )}
       </div>
       <hr />
-      {isNavbarOn && windowWidth < 768 ? (
+      {isNavbarOn && windowWidth < (context?.screen.mobile ?? 768) ? (
         <Planets
           className="planets--container--vertical"
           closeNavbarWithLinkClick={closeNavbarWithLinkClick}

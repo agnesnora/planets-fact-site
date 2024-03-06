@@ -31,7 +31,7 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
 
   return (
     <div>
-      {windowWidth < 768 ? (
+      {windowWidth < (context?.screen.mobile ?? 768) ? (
         <div>
           {" "}
           <OptionSelector
@@ -55,7 +55,6 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
                 className="front--img"
                 src={planet.images.geology}
                 alt={`${planet.name} geology image`}
-                // style={{ width: "200px", height: "200px" }}
               />
             </div>
           ) : (
@@ -65,20 +64,7 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
               alt={`${planet.name} image`}
             />
           )}
-          {/* <div className="img--container">
-            {" "}
-            {view === "geology" ? (
-              <div>
-                <img src={planet.images.planet} alt={`${planet.name} image`} />
-                <img
-                  src={planet.images.geology}
-                  alt={`${planet.name} geology image`}
-                />
-              </div>
-            ) : (
-              <img src={planetImage} alt={`${planet.name} image`} />
-            )}
-          </div> */}
+
           <div className="planet--main">
             <div className="planet--intro">
               <h1>{planet.name.toUpperCase()}</h1>
@@ -91,7 +77,7 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
                 </Link>
               </div>
             </div>
-            {windowWidth > 768 ? (
+            {windowWidth > (context?.screen.mobile ?? 1200) ? (
               <OptionSelector
                 planetName={planet.name}
                 view={view}

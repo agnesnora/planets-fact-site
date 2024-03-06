@@ -2,10 +2,9 @@ import { FC, useContext } from "react";
 import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
 import "./style/Planets.css";
-import { PlanetsDetailPage } from "./PlanetsDetailPage";
+
 import { MdArrowForwardIos } from "react-icons/md";
 interface PlanetsProps {
-  // children: ReactNode;
   className: string;
   isNavbarOn: boolean;
   closeNavbarWithLinkClick: () => void;
@@ -19,7 +18,6 @@ export const Planets: FC<PlanetsProps> = ({
   const windowWidth = context?.windowWidth ?? 1200;
 
   const handleLinkClick = () => {
-    // Close the navbar when a link is clicked
     closeNavbarWithLinkClick();
   };
 
@@ -41,24 +39,27 @@ export const Planets: FC<PlanetsProps> = ({
             >
               <div
                 onClick={handleLinkClick}
-                className={windowWidth < 768 ? "nav--list--flex" : "nav--list"}
+                className={
+                  windowWidth < (context?.screen.mobile ?? 768)
+                    ? "nav--list--flex"
+                    : "nav--list"
+                }
               >
                 <div className="dotted--name">
-                  {windowWidth < 768 ? (
+                  {windowWidth < (context?.screen.mobile ?? 768) ? (
                     <div className={`${item.name.toLowerCase()} dot`}></div>
                   ) : null}
                   <h2>{item.name}</h2>
                 </div>
 
-                {windowWidth < 768 ? (
+                {windowWidth < (context?.screen.mobile ?? 768) ? (
                   <MdArrowForwardIos className="forward--icon" />
                 ) : null}
               </div>
-              {windowWidth < 768 ? <hr></hr> : null}
+              {windowWidth < (context?.screen.mobile ?? 768) ? <hr></hr> : null}
             </Link>
           ))}
       </ul>
-      {/* <PlanetsDetailPage /> */}
     </div>
   );
 };
