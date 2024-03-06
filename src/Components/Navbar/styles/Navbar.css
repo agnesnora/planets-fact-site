@@ -72,6 +72,9 @@
     padding: 0;
   }
   .navbar--flex--container a {
-    margin-bottom: 2em;
+    margin-bottom: 0;
+  }
+  .navbar--flex--container a h2 {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=Navbar.css.map */
