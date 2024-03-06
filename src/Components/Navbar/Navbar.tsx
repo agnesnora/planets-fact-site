@@ -35,7 +35,10 @@ export const Navbar: FC<NavbarProps> = ({ isNavbarOn, setIsNavbarOn }) => {
             <TfiMenu />
           </Button>
         ) : (
-          <Planets className="planets--container--horizontal" />
+          <Planets
+            className="planets--container--horizontal"
+            closeNavbarWithLinkClick={closeNavbarWithLinkClick}
+          />
         )}
       </div>
       <hr />
