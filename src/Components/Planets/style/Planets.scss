@@ -51,7 +51,6 @@
     font-family: $Spartan;
     border: none;
     letter-spacing: 3px;
-    border: none;
   }
 
   .active {
@@ -152,19 +151,22 @@ hr {
         }
       }
       .selector--container {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
         button {
           border: $lightGrey 0.1px solid;
           padding: 1em 2em;
           margin: 0.5em 0;
-          width: 350px;
+          // width: 350px;
           font-size: 16px;
           font-weight: 500;
 
           color: $pureWhite;
           text-align: left;
           .number {
-            color: $lightGrey;
+            color: $darkGrey;
             margin-right: 1em;
           }
           &:hover {
@@ -203,16 +205,62 @@ hr {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      margin-bottom: 3em;
       .img--container {
-        width: 500px;
-        height: 500px;
+        flex: 1;
+        max-width: 40%;
+
+        img {
+          width: 100%;
+        }
       }
       .planet--main {
+        flex: 1;
+        max-width: 40%;
         flex-direction: column;
         padding: 3rem;
-        max-width: 500px;
+        // max-width: 600px;
+        align-self: stretch;
         .planet--intro {
-          margin: 0;
+          margin: 2em 0;
+          h1 {
+            font-size: 5rem;
+            margin-top: 0;
+          }
+          .selector--container {
+            width: 100%;
+            align-items: stretch;
+
+            button {
+              align-items: stretch;
+              flex: 1; //
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .fact--container {
+      display: flex;
+      justify-content: space-evenly;
+      // justify-content: space-between;
+      // margin-top: 2em;
+
+      // align-items: left;
+
+      .fact--box {
+        // flex-direction: column;
+        // min-width: 180px;
+        max-width: 350px;
+        padding-left: 1em;
+
+        h4 {
+          font-size: 2.5rem;
+          padding: 0.2em 1.2em 0.2em 0;
+        }
+        p {
+          font-size: 1.2rem;
+          margin-top: 1em;
         }
       }
     }

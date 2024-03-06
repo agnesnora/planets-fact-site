@@ -83,10 +83,15 @@
     flex-direction: row;
     padding: 0;
   }
-  .navbar--flex--container a {
-    margin-bottom: 0;
+  .navbar--flex--container h1 {
+    font-size: 1.5rem;
   }
-  .navbar--flex--container a h2 {
-    margin-bottom: 0;
+  .navbar--flex--container .planets--container--horizontal ul a {
+    margin: 0;
+  }
+  .navbar--flex--container .planets--container--horizontal ul a h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0 1em;
   }
 }/*# sourceMappingURL=Navbar.css.map */

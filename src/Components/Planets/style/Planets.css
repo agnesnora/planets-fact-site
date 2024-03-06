@@ -52,7 +52,6 @@
   font-family: "League Spartan", sans-serif;
   border: none;
   letter-spacing: 3px;
-  border: none;
 }
 .selector--container .active {
   border-bottom: 3px solid;
@@ -142,20 +141,22 @@ hr {
     justify-content: left;
   }
   .planet--container .planet--main .selector--container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
   }
   .planet--container .planet--main .selector--container button {
     border: #838391 0.1px solid;
     padding: 1em 2em;
     margin: 0.5em 0;
-    width: 350px;
     font-size: 16px;
     font-weight: 500;
     color: #ffffff;
     text-align: left;
   }
   .planet--container .planet--main .selector--container button .number {
-    color: #838391;
+    color: #38384f;
     margin-right: 1em;
   }
   .planet--container .planet--main .selector--container button:hover {
@@ -188,17 +189,52 @@ hr {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 3em;
   }
   .planet--container .planet--container--flex .img--container {
-    width: 500px;
-    height: 500px;
+    flex: 1;
+    max-width: 40%;
+  }
+  .planet--container .planet--container--flex .img--container img {
+    width: 100%;
   }
   .planet--container .planet--container--flex .planet--main {
+    flex: 1;
+    max-width: 40%;
     flex-direction: column;
     padding: 3rem;
-    max-width: 500px;
+    align-self: stretch;
   }
   .planet--container .planet--container--flex .planet--main .planet--intro {
-    margin: 0;
+    margin: 2em 0;
+  }
+  .planet--container .planet--container--flex .planet--main .planet--intro h1 {
+    font-size: 5rem;
+    margin-top: 0;
+  }
+  .planet--container .planet--container--flex .planet--main .planet--intro .selector--container {
+    width: 100%;
+    align-items: stretch;
+  }
+  .planet--container .planet--container--flex .planet--main .planet--intro .selector--container button {
+    align-items: stretch;
+    flex: 1;
+    width: 100%;
+  }
+  .planet--container .fact--container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .planet--container .fact--container .fact--box {
+    max-width: 350px;
+    padding-left: 1em;
+  }
+  .planet--container .fact--container .fact--box h4 {
+    font-size: 2.5rem;
+    padding: 0.2em 1.2em 0.2em 0;
+  }
+  .planet--container .fact--container .fact--box p {
+    font-size: 1.2rem;
+    margin-top: 1em;
   }
 }/*# sourceMappingURL=planets.css.map */

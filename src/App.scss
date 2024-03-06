@@ -10,6 +10,7 @@ body {
   margin: 0 auto;
   font-family: $Spartan;
   background-image: url("/background-stars.svg");
+  max-width: 2500px;
 }
 .default {
   background-color: $button--default--bgColor;

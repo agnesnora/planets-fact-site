@@ -81,7 +81,7 @@ export const OptionSelector: FC<SelectorProps> = ({
       >
         {windowWidth > 768 ? (
           <div>
-            <span className="number">03</span> Overview
+            <span className="number">01</span> Overview
           </div>
         ) : (
           "Overview"
