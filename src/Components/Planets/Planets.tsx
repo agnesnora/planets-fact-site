@@ -5,8 +5,8 @@ import "./style/Planets.css";
 
 import { MdArrowForwardIos } from "react-icons/md";
 interface PlanetsProps {
-  className: string;
-  isNavbarOn: boolean;
+  className?: string;
+  isNavbarOn?: boolean;
   closeNavbarWithLinkClick: () => void;
 }
 

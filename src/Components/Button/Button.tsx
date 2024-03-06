@@ -4,7 +4,7 @@ interface ButtonProps {
   onClick: () => void;
   className: string;
   children: ReactNode;
-  style: CSSProperties;
+  style?: CSSProperties;
 }
 
 export const Button: FC<ButtonProps> = ({
