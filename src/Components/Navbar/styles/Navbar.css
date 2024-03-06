@@ -37,6 +37,9 @@
   color: #838391;
   text-transform: uppercase;
 }
+.planets--container--horizontal ul a:hover {
+  color: #ffffff;
+}
 .planets--container--horizontal ul a h2 {
   font-weight: 600;
   padding: 1em 1.2em;
@@ -91,7 +94,8 @@
   }
   .navbar--flex--container .planets--container--horizontal ul a h2 {
     margin: 0;
-    font-size: 1.5rem;
-    padding: 0 1em;
+    font-size: 1.3rem;
+    padding: 0 0.5em;
+    font-weight: 400;
   }
 }/*# sourceMappingURL=Navbar.css.map */

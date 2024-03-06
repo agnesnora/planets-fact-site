@@ -61,13 +61,25 @@
 .planet--container {
   padding: 2em;
   .img--container {
-    display: flex;
-  }
-  img {
+    position: relative;
     margin: 0 auto;
-    text-align: center;
-    // width: 200px;
-    // height: 200px;
+
+    .back--img {
+      width: 60%; // Adjust the width as needed
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .front--img {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%; // Adjust the width as needed
+      height: auto;
+      display: block;
+    }
   }
 
   .planet--main {
@@ -166,7 +178,7 @@ hr {
           color: $pureWhite;
           text-align: left;
           .number {
-            color: $darkGrey;
+            color: $lightGrey;
             margin-right: 1em;
           }
           &:hover {

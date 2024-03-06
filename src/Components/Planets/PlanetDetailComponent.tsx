@@ -44,10 +44,37 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
       ) : null}
       <div className="planet--container">
         <div className="planet--container--flex">
-          <div className="img--container">
-            {" "}
+          {view === "geology" ? (
+            <div className="img--container">
+              <img
+                className="back--img"
+                src={planet.images.planet}
+                alt={`${planet.name} image`}
+              />
+              <img
+                className="front--img"
+                src={planet.images.geology}
+                alt={`${planet.name} geology image`}
+                style={{ width: "200px", height: "200px;" }}
+              />
+            </div>
+          ) : (
             <img src={planetImage} alt={`${planet.name} image`} />
-          </div>
+          )}
+          {/* <div className="img--container">
+            {" "}
+            {view === "geology" ? (
+              <div>
+                <img src={planet.images.planet} alt={`${planet.name} image`} />
+                <img
+                  src={planet.images.geology}
+                  alt={`${planet.name} geology image`}
+                />
+              </div>
+            ) : (
+              <img src={planetImage} alt={`${planet.name} image`} />
+            )}
+          </div> */}
           <div className="planet--main">
             <div className="planet--intro">
               <h1>{planet.name.toUpperCase()}</h1>

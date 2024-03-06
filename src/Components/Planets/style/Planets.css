@@ -61,11 +61,23 @@
   padding: 2em;
 }
 .planet--container .img--container {
-  display: flex;
-}
-.planet--container img {
+  position: relative;
   margin: 0 auto;
-  text-align: center;
+}
+.planet--container .img--container .back--img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.planet--container .img--container .front--img {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: auto;
+  display: block;
 }
 .planet--container .planet--main .planet--intro {
   text-align: center;
@@ -156,7 +168,7 @@ hr {
     text-align: left;
   }
   .planet--container .planet--main .selector--container button .number {
-    color: #38384f;
+    color: #838391;
     margin-right: 1em;
   }
   .planet--container .planet--main .selector--container button:hover {

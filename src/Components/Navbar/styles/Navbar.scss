@@ -41,6 +41,9 @@
     text-decoration: none;
     color: $lightGrey;
     text-transform: uppercase;
+    &:hover {
+      color: $pureWhite;
+    }
     h2 {
       font-weight: 600;
       padding: 1em 1.2em;
@@ -98,10 +101,12 @@
       ul {
         a {
           margin: 0;
+
           h2 {
             margin: 0;
-            font-size: 1.5rem;
-            padding: 0 1em;
+            font-size: 1.3rem;
+            padding: 0 0.5em;
+            font-weight: 400;
           }
         }
       }
