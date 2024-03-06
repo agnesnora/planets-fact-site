@@ -86,3 +86,17 @@
     }
   }
 }
+
+@media (min-width: 1240px) {
+  .navbar--flex--container {
+    flex-direction: row;
+    padding: 0;
+    a {
+      margin-bottom: 0;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -77,4 +77,16 @@
   .navbar--flex--container a h2 {
     margin-bottom: 0;
   }
+}
+@media (min-width: 1240px) {
+  .navbar--flex--container {
+    flex-direction: row;
+    padding: 0;
+  }
+  .navbar--flex--container a {
+    margin-bottom: 0;
+  }
+  .navbar--flex--container a h2 {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=Navbar.css.map */

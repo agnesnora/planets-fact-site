@@ -179,4 +179,26 @@ hr {
     text-align: left;
     align-self: flex-start;
   }
+}
+@media (min-width: 1240px) {
+  .planet--container {
+    padding: 6rem;
+  }
+  .planet--container .planet--container--flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .planet--container .planet--container--flex .img--container {
+    width: 500px;
+    height: 500px;
+  }
+  .planet--container .planet--container--flex .planet--main {
+    flex-direction: column;
+    padding: 3rem;
+    max-width: 500px;
+  }
+  .planet--container .planet--container--flex .planet--main .planet--intro {
+    margin: 0;
+  }
 }/*# sourceMappingURL=planets.css.map */

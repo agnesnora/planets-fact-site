@@ -196,3 +196,25 @@ hr {
     }
   }
 }
+@media (min-width: 1240px) {
+  .planet--container {
+    padding: 6rem;
+    .planet--container--flex {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .img--container {
+        width: 500px;
+        height: 500px;
+      }
+      .planet--main {
+        flex-direction: column;
+        padding: 3rem;
+        max-width: 500px;
+        .planet--intro {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

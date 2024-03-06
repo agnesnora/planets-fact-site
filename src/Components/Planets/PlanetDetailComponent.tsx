@@ -43,29 +43,31 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
         </div>
       ) : null}
       <div className="planet--container">
-        <div className="img--container">
-          {" "}
-          <img src={planetImage} alt={`${planet.name} image`} />
-        </div>
-        <div className="planet--main">
-          <div className="planet--intro">
-            <h1>{planet.name.toUpperCase()}</h1>
-            <p>{planet.overview.content}</p>
-            <div className="wikipedia">
-              <p>Source :</p>
-              <Link to={planet.overview.source}>
-                Wikipedia{" "}
-                <FaExternalLinkSquareAlt className="external--link--icon" />
-              </Link>
-            </div>
+        <div className="planet--container--flex">
+          <div className="img--container">
+            {" "}
+            <img src={planetImage} alt={`${planet.name} image`} />
           </div>
-          {windowWidth > 768 ? (
-            <OptionSelector
-              planetName={planet.name}
-              view={view}
-              setView={setView}
-            />
-          ) : null}
+          <div className="planet--main">
+            <div className="planet--intro">
+              <h1>{planet.name.toUpperCase()}</h1>
+              <p>{planet.overview.content}</p>
+              <div className="wikipedia">
+                <p>Source :</p>
+                <Link to={planet.overview.source}>
+                  Wikipedia{" "}
+                  <FaExternalLinkSquareAlt className="external--link--icon" />
+                </Link>
+              </div>
+            </div>
+            {windowWidth > 768 ? (
+              <OptionSelector
+                planetName={planet.name}
+                view={view}
+                setView={setView}
+              />
+            ) : null}
+          </div>
         </div>
 
         <div className="fact--container">
