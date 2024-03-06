@@ -75,9 +75,14 @@
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50%;
-  height: auto;
+  height: 150px;
   display: block;
+}
+.planet--container img {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  max-width: 200px;
 }
 .planet--container .planet--main .planet--intro {
   text-align: center;
@@ -141,6 +146,9 @@ hr {
 }
 
 @media (min-width: 768px) {
+  .planet--container img {
+    max-width: 400px;
+  }
   .planet--container .planet--main {
     display: flex;
     align-items: center;
@@ -197,6 +205,34 @@ hr {
   .planet--container {
     padding: 6rem;
   }
+  .planet--container .img--container {
+    position: relative;
+    margin: 0 auto;
+  }
+  .planet--container .img--container .planet--img {
+    width: 80%;
+    height: auto;
+  }
+  .planet--container .img--container .back--img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .planet--container .img--container .front--img {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 250px;
+    display: block;
+  }
+  .planet--container img {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    max-width: 600px;
+  }
   .planet--container .planet--container--flex {
     display: flex;
     justify-content: space-around;
@@ -205,10 +241,6 @@ hr {
   }
   .planet--container .planet--container--flex .img--container {
     flex: 1;
-    max-width: 40%;
-  }
-  .planet--container .planet--container--flex .img--container img {
-    width: 100%;
   }
   .planet--container .planet--container--flex .planet--main {
     flex: 1;

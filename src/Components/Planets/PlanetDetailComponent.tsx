@@ -55,11 +55,15 @@ export const PlanetDetailComponent: FC<PlanetDetailProps> = ({
                 className="front--img"
                 src={planet.images.geology}
                 alt={`${planet.name} geology image`}
-                style={{ width: "200px", height: "200px;" }}
+                // style={{ width: "200px", height: "200px" }}
               />
             </div>
           ) : (
-            <img src={planetImage} alt={`${planet.name} image`} />
+            <img
+              className="planet--img"
+              src={planetImage}
+              alt={`${planet.name} image`}
+            />
           )}
           {/* <div className="img--container">
             {" "}
