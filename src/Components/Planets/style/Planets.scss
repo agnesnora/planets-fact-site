@@ -276,6 +276,7 @@ hr {
         max-width: 40%;
         flex-direction: column;
         padding: 3rem;
+        padding-right: 0;
         // max-width: 600px;
         align-self: stretch;
         .planet--intro {
@@ -299,11 +300,7 @@ hr {
     }
     .fact--container {
       display: flex;
-      justify-content: space-evenly;
-      // justify-content: space-between;
-      // margin-top: 2em;
-
-      // align-items: left;
+      justify-content: space-between;
 
       .fact--box {
         // flex-direction: column;
