@@ -1,5 +1,7 @@
 @import "../../../variables.scss";
-
+a {
+  text-decoration: none;
+}
 .navbar--container {
   .navbar--flex--container {
     display: flex;
@@ -7,7 +9,7 @@
     align-items: center;
     padding: 2em 2em 0.5em 2em;
     a {
-      text-decoration: none;
+      // text-decoration: none;
       h1 {
         color: $pureWhite;
         font-family: $Antonio;
@@ -25,6 +27,7 @@
       border: none;
       font-size: 1.75rem;
       margin-top: 0.25em;
+      text-decoration: none;
     }
   }
 }
@@ -38,7 +41,7 @@
   justify-content: space-between;
 
   a {
-    text-decoration: none;
+    // text-decoration: none;
     color: $lightGrey;
     text-transform: uppercase;
     &:hover {

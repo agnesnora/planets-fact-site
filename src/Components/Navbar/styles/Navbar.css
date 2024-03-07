@@ -1,11 +1,12 @@
+a {
+  text-decoration: none;
+}
+
 .navbar--container .navbar--flex--container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2em 2em 0.5em 2em;
-}
-.navbar--container .navbar--flex--container a {
-  text-decoration: none;
 }
 .navbar--container .navbar--flex--container a h1 {
   color: #ffffff;
@@ -22,6 +23,7 @@
   border: none;
   font-size: 1.75rem;
   margin-top: 0.25em;
+  text-decoration: none;
 }
 
 .planets--container--vertical .planets--list {
@@ -33,7 +35,6 @@
   justify-content: space-between;
 }
 .planets--container--horizontal ul a {
-  text-decoration: none;
   color: #838391;
   text-transform: uppercase;
 }
